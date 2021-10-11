@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import Loader from './Loader';
 
 
-// const apiKey = 'l5EhAsWjR5kKl0gXVU5m2ajLlJGvUpeI'
 const Giphy = () => {
     const [data, setData] = useState([])
     const [isLoading, setIsLoading] = useState(false)
