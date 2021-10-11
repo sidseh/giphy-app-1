@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import Loader from './Loader';
 
 
-const apiKey = 'l5EhAsWjR5kKl0gXVU5m2ajLlJGvUpeI'
+// const apiKey = 'l5EhAsWjR5kKl0gXVU5m2ajLlJGvUpeI'
 const Giphy = () => {
     const [data, setData] = useState([])
     const [isLoading, setIsLoading] = useState(false)
@@ -15,7 +15,7 @@ const Giphy = () => {
             setIsLoading(true)
             
             try {
-                const response = await fetch(`https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=25`)
+                const response = await fetch(`https://api.giphy.com/v1/gifs/trending?api_key=${process.env.REACT_APP_API_KEY}&limit=25`)
                 const data = await response.json()
 
                 
